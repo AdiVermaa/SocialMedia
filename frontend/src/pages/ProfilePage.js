@@ -54,7 +54,7 @@ const ProfilePage = () => {
       }
     };
     load();
-  }, [username]);
+  }, [username, currentUser?._id, navigate]);
 
   const handleFollow = async () => {
     if (!profile) return;

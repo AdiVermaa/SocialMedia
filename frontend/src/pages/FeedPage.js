@@ -15,7 +15,6 @@ import {
   AccessTime as NewIcon,
   FavoriteBorder as LikeIcon,
   ChatBubbleOutline as CommentIcon,
-  Refresh as RefreshIcon,
   Search as SearchIcon,
 } from '@mui/icons-material';
 import { fetchPosts } from '../api';

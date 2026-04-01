@@ -17,11 +17,8 @@ import {
   FavoriteBorder as LikeIcon,
   Favorite as LikedIcon,
   ChatBubbleOutline as CommentIcon,
-  Share as ShareIcon,
   Delete as DeleteIcon,
   Send as SendIcon,
-  ExpandMore as ExpandIcon,
-  ExpandLess as CollapseIcon,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { likePost, addComment, deletePost, deleteComment, followUser } from '../api';

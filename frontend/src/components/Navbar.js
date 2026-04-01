@@ -3,7 +3,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Button,
   Avatar,
   Box,
   IconButton,
@@ -13,8 +12,6 @@ import {
   Chip,
 } from '@mui/material';
 import {
-  Public as PublicIcon,
-  Person as PersonIcon,
   Logout as LogoutIcon,
   AccountCircle as AccountCircleIcon,
   DarkModeOutlined as DarkModeIcon,
