@@ -1,0 +1,17 @@
+# Root
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Frontend build
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Backend
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/.env

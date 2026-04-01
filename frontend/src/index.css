@@ -1,0 +1,171 @@
+/* ─────────────────────────────────────────────
+   Global CSS — Social App
+   Design: Dark mode inspired by TaskPlanet social feed
+   Font: Inter from Google Fonts
+───────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* Color Palette - Premium Blue & White Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-input: #f8fafc;
+
+  --brand-blue: #2563eb;       /* Modern SaaS Blue */
+  --brand-blue-light: #60a5fa;
+  --brand-blue-hover: #1d4ed8;
+  --brand-purple: #0ea5e9;
+  --brand-gradient: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --border-color: #e2e8f0;
+  --border-hover: #2563eb;
+
+  --like-color: #ef4444;
+  --like-hover: #f87171;
+  --comment-color: #2563eb;
+  --share-color: #10b981;
+
+  --success: #10b981;
+  --error: #ef4444;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 30px rgba(37, 99, 235, 0.12);
+}
+
+/* ─────────────────────────────────────────────
+   Dark Theme Overrides
+   ───────────────────────────────────────────── */
+.dark-theme {
+  --bg-primary: #020617;   /* Deepest Navy */
+  --bg-secondary: #0f172a; /* Foundation Navy */
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
+  --bg-input: #020617;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border-color: #1e293b;
+  --border-hover: #3b82f6;
+
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-blue);
+}
+
+/* ── Typography helpers ────────────────────── */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--brand-blue-light);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--brand-blue);
+}
+
+/* ── Utility: glass card ───────────────────── */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+.glass-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* ── Animations ────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+/* ── Spinner ───────────────────────────────── */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--brand-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
