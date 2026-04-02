@@ -131,7 +131,7 @@ const ProfilePage = () => {
       <Paper
         elevation={0}
         sx={{
-          bgcolor: '#ffffff',
+          bgcolor: 'var(--bg-card)',
           border: '1px solid #e4e6eb',
           borderRadius: '20px',
           overflow: 'hidden',
@@ -160,7 +160,7 @@ const ProfilePage = () => {
           >
             <Box sx={{ position: 'relative' }}>
               <Avatar
-                src={profile.avatar}
+                src={profile.avatar?.startsWith('/uploads') ? `${process.env.REACT_APP_SERVER_URL}${profile.avatar}` : profile.avatar}
                 sx={{
                   width: 110,
                   height: 110,

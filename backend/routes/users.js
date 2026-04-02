@@ -38,7 +38,7 @@ router.put('/profile/update', protect, upload.single('avatar'), async (req, res)
 
     // If an avatar file was uploaded, build the URL
     if (req.file) {
-      updateData.avatar = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+      updateData.avatar = `/uploads/${req.file.filename}`;
     }
 
     const user = await User.findByIdAndUpdate(

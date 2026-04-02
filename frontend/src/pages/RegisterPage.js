@@ -100,8 +100,8 @@ const RegisterPage = () => {
         sx={{
           width: '100%',
           maxWidth: 420,
-          bgcolor: '#ffffff',
-          border: '1px solid #e4e6eb',
+          bgcolor: 'var(--bg-card)',
+          border: '1px solid var(--border-color)',
           borderRadius: '24px',
           p: { xs: 3, sm: 4 },
           boxShadow: '0 24px 64px rgba(0,0,0,0.5)',

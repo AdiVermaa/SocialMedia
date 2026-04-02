@@ -305,7 +305,7 @@ const PostCard = ({ post: initialPost, onDelete }) => {
       {post.image && (
         <Box sx={{ mt: post.text ? 1.5 : 0 }}>
           <img
-            src={post.image}
+            src={post.image?.startsWith('/uploads') ? `${process.env.REACT_APP_SERVER_URL}${post.image}` : post.image}
             alt="post"
             style={{
               width: '100%',

@@ -78,8 +78,7 @@ router.post('/', protect, upload.single('image'), async (req, res) => {
 
     // If a file was uploaded, build the URL
     if (req.file) {
-      // Local storage path served via /uploads/
-      imageUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
+      imageUrl = `/uploads/${req.file.filename}`;
     }
 
     // Validate at least one field

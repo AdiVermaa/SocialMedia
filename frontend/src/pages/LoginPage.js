@@ -89,7 +89,7 @@ const LoginPage = () => {
         sx={{
           width: '100%',
           maxWidth: 420,
-          bgcolor: '#ffffff',
+          bgcolor: 'var(--bg-card)',
           border: '1px solid #e4e6eb',
           borderRadius: '24px',
           p: { xs: 3, sm: 4 },

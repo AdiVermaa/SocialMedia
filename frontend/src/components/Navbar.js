@@ -112,7 +112,7 @@ const Navbar = () => {
           <Chip
             avatar={
               <Avatar
-                src={user.avatar}
+                src={user.avatar?.startsWith('/uploads') ? `${process.env.REACT_APP_SERVER_URL}${user.avatar}` : user.avatar}
                 sx={{ bgcolor: 'var(--brand-blue)', color: '#ffffff', fontSize: '0.7rem', fontWeight: 800 }}
               >
                 {user.username?.[0]?.toUpperCase()}
@@ -141,8 +141,8 @@ const Navbar = () => {
           PaperProps={{
             sx: {
               mt: 1,
-              bgcolor: '#ffffff',
-              border: '1px solid #e4e6eb',
+              bgcolor: 'var(--bg-card)',
+              border: '1px solid var(--border-color)',
               borderRadius: '14px',
               minWidth: 180,
               boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
@@ -151,7 +151,7 @@ const Navbar = () => {
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
-          <MenuItem onClick={handleProfile} sx={{ color: '#050505', gap: 1.5 }}>
+          <MenuItem onClick={handleProfile} sx={{ color: 'var(--text-primary)', gap: 1.5 }}>
             <AccountCircleIcon fontSize="small" sx={{ color: '#1877f2' }} />
             My Profile
           </MenuItem>
