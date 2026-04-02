@@ -1,0 +1,8 @@
+{
+  "name": "social-media-repo",
+  "private": true,
+  "scripts": {
+    "install": "cd frontend && npm install --legacy-peer-deps",
+    "build": "cd frontend && CI=false GENERATE_SOURCEMAP=false npm run build"
+  }
+}
