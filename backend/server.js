@@ -14,12 +14,12 @@ const userRoutes = require("./routes/users");
 
 const app = express();
 
-// ──────────────────────────────────────────────
-// Middleware
-// ──────────────────────────────────────────────
+// CORS configuration - handle trailing slashes in CLIENT_URL
+const clientUrl = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, "") : "http://localhost:3000";
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: clientUrl,
     credentials: true,
   }),
 );
